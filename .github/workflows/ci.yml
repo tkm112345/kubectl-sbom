@@ -31,11 +31,10 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - uses: golangci/golangci-lint-action@v6
+      - uses: golangci/golangci-lint-action@v7
         with:
-          # golangci-lint-action's "latest" tracks the v1.x line, which is
-          # built with an older Go than this module now requires (see
-          # go.mod). Pin to a v2.x release built with a Go toolchain new
-          # enough to lint this module.
+          # golangci-lint-action v6's "latest" tracks golangci-lint's v1.x
+          # line, which is built with an older Go than this module now
+          # requires (see go.mod). v7 supports golangci-lint v2.
           version: v2.12.2
           args: --timeout=5m
