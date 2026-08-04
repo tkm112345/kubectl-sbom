@@ -1,0 +1,178 @@
+CONTAINER        test-curl
+IMAGE            cgr.dev/chainguard/curl:latest
+DIGEST           cgr.dev/chainguard/curl@sha256:d9a0165f6b288b050441ab6a9789f98987211f72f527d53f16ffab575f615205
+PLATFORM DIGEST  cgr.dev/chainguard/curl@sha256:17e611ecaaf2b1243d57b2ba4aa1ca618b7a2d89528ac0eff7378e6a66aedb53
+SBOM TYPE        https://spdx.dev/Document
+COMPONENTS       170
+
+NAME                                                                     VERSION                                                                  LICENSE
+sha256:17e611ecaaf2b1243d57b2ba4aa1ca618b7a2d89528ac0eff7378e6a66aedb53  sha256:17e611ecaaf2b1243d57b2ba4aa1ca618b7a2d89528ac0eff7378e6a66aedb53  
+sha256:001edbadbfeaf167d8568ee6ddd769b899aaabfe4d40581219abd2dfba0bf493  20230201                                                                 
+sha256:1d06b93893bfe173b48eede1f37aa3411a7d3b02d646252a86995e93a8df1cf0  20230201                                                                 
+sha256:8e5b28b859bcbdd179c7c868485a3611bf2fb8f21c656f1a539f38c8096e1808  20230201                                                                 
+sha256:b13fa6693405a3d0f5e062ec77b981a915495a0fa7cce1f5c28f37934c51e78e  20230201                                                                 
+sha256:d963509e1ae315fa3fb65949e695eb4e491cf175404e6d4b993c67f546408b12  20230201                                                                 
+sha256:9de226c9d4db24f7f952c509f4b1a9e1f629fb11567c40e5e7da8018595e6fce  20230201                                                                 
+sha256:d9a2d8aa5eb19f753278206709bafd847992713f83f0170ee55a4aa43733ca64  20230201                                                                 
+sha256:bd9a853514853b97955834ae5eb743210848fbf1e54745e3792cb43c5ef99c15  20230201                                                                 
+sha256:b43e0b14c27418705e420f6d1988be4acaba7bd972792dd25e7d114a44ec1cfb  20230201                                                                 
+sha256:0eaa8e2b4e7f392ce64fb673f56c8419e96c37325b78d0b574bfbe5cb15fbb5c  20230201                                                                 
+sha256:512f8ed49d82dd05f9e4497cb15ba5f8c176a85c29bc9e3efcf31caaac0f8a8a  20230201                                                                 
+wolfi                                                                    20230201                                                                 
+wolfi-baselayout                                                         20230201-r29                                                             MIT
+wolfi-baselayout.yaml                                                    35e7b4713442869116936fae3fe8cf7c69bc9054                                 Apache-2.0
+wolfi-baselayout                                                         20230201-r29                                                             MIT
+wolfi-baselayout                                                         20230201-r29                                                             
+ca-certificates-bundle                                                   20260413-r0                                                              MPL-2.0 AND MIT
+ca-certificates.yaml                                                     5fb1c6869c186cb9b385b875141643409c440ac2                                 Apache-2.0
+ca-certificates                                                          20260413                                                                 MPL-2.0 AND MIT
+ca-certificates-bundle                                                   20260413-r0                                                              (MPL-2.0 AND MIT)
+ca-certificates-bundle                                                   20260413-r0                                                              
+glibc-locale-posix                                                       2.43-r11                                                                 LGPL-2.1-or-later
+glibc.yaml                                                               c8659fb8a02b0cbff1c07e2d367796b6a074e14d                                 Apache-2.0
+gnutools/glibc                                                           dae425b554207f7c4599c7fac707ad4c08545674                                 LGPL-2.1-or-later
+glibc-locale-posix                                                       2.43-r11                                                                 LGPL-2.1-or-later
+glibc-locale-posix                                                       2.43-r11                                                                 
+libgcc                                                                   16.1.0-r4                                                                GPL-3.0-or-later WITH GCC-exception-3.1
+gcc.yaml                                                                 ee52ebd3c186a06b70547dbfa69282385da38f2b                                 Apache-2.0
+gnutools/gcc                                                             releases/gcc-16.1.0                                                      GPL-3.0-or-later WITH GCC-exception-3.1
+libgcc                                                                   16.1.0-r4                                                                (GPL-3.0-or-later WITH GCC-exception-3.1)
+libgcc                                                                   16.1.0-r4                                                                
+glibc                                                                    2.43-r11                                                                 LGPL-2.1-or-later
+glibc                                                                    2.43-r11                                                                 LGPL-2.1-or-later
+glibc                                                                    2.43-r11                                                                 
+ld-linux                                                                 2.43-r11                                                                 LGPL-2.1-or-later
+ld-linux                                                                 2.43-r11                                                                 LGPL-2.1-or-later
+ld-linux                                                                 2.43-r11                                                                 
+libbrotlicommon1                                                         1.2.0-r3                                                                 MIT
+brotli.yaml                                                              805df43a1d8bc2ce041ef9f1133fd003fa8a0a10                                 Apache-2.0
+brotli                                                                   v1.2.0                                                                   MIT
+libbrotlicommon1                                                         1.2.0-r3                                                                 MIT
+libbrotlicommon1                                                         1.2.0-r3                                                                 
+libbrotlidec1                                                            1.2.0-r3                                                                 MIT
+libbrotlidec1                                                            1.2.0-r3                                                                 MIT
+libbrotlidec1                                                            1.2.0-r3                                                                 
+libcrypto3                                                               3.6.3-r3                                                                 Apache-2.0
+openssl.yaml                                                             0e3bd807e6225612bd1cce56950bf087b583cee8                                 Apache-2.0
+openssl                                                                  openssl-3.6.3                                                            Apache-2.0
+libcrypto3                                                               3.6.3-r3                                                                 Apache-2.0
+libcrypto3                                                               3.6.3-r3                                                                 
+krb5-conf                                                                1.0-r9                                                                   MIT
+krb5-conf.yaml                                                           bb37bc90f076f9eb2a12980e43c3f12673133835                                 Apache-2.0
+krb5-conf                                                                1.0-r9                                                                   MIT
+krb5-conf                                                                1.0-r9                                                                   
+libcom_err                                                               1.47.4-r1                                                                GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
+e2fsprogs.yaml                                                           4cdc0f257ba04f4476c5323e52f0f389e68e534a                                 Apache-2.0
+e2fsprogs                                                                v1.47.4                                                                  GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
+libcom_err                                                               1.47.4-r1                                                                (GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT)
+libcom_err                                                               1.47.4-r1                                                                
+keyutils-libs                                                            1.6.3-r38                                                                GPL-2.0-or-later OR LGPL-2.0-or-later
+keyutils.yaml                                                            2680b937a41377fc6b05382823840a287f3bd50b                                 Apache-2.0
+pub/scm/linux/kernel/git/dhowells/keyutils                               v1.6.3                                                                   GPL-2.0-or-later OR LGPL-2.0-or-later
+keyutils-libs                                                            1.6.3-r38                                                                (GPL-2.0-or-later OR LGPL-2.0-or-later)
+keyutils-libs                                                            1.6.3-r38                                                                
+libssl3                                                                  3.6.3-r3                                                                 Apache-2.0
+libssl3                                                                  3.6.3-r3                                                                 Apache-2.0
+libssl3                                                                  3.6.3-r3                                                                 
+libverto                                                                 0.3.2-r7                                                                 MIT
+libverto.yaml                                                            79c7eda43fae1c44ddd378bb021e59175624ad6e                                 Apache-2.0
+libverto                                                                 0.3.2                                                                    MIT
+libverto                                                                 0.3.2-r7                                                                 MIT
+libverto                                                                 0.3.2-r7                                                                 
+krb5-libs                                                                1.22.2-r2                                                                MIT
+krb5.yaml                                                                63a99011b1face0d36060eb2d4cffaf97630a578                                 Apache-2.0
+krb5                                                                     krb5-1.22.2-final                                                        MIT
+krb5-libs                                                                1.22.2-r2                                                                MIT
+krb5-libs                                                                1.22.2-r2                                                                
+libunistring                                                             1.4.2-r2                                                                 GPL-2.0-or-later OR LGPL-3.0-or-later
+libunistring.yaml                                                        44bcd0af195f786e83f248bcef66933277c1d6c9                                 Apache-2.0
+git/libunistring                                                         v1.4.2                                                                   GPL-2.0-or-later OR LGPL-3.0-or-later
+libunistring                                                             1.4.2-r2                                                                 (GPL-2.0-or-later OR LGPL-3.0-or-later)
+libunistring                                                             1.4.2-r2                                                                 
+libidn2                                                                  2.3.8-r7                                                                 GPL-2.0-or-later AND LGPL-3.0-or-later
+libidn2.yaml                                                             88eb619cdd1904e42810d4e2c7e8d65cdaa64d5a                                 Apache-2.0
+libidn2                                                                  v2.3.8                                                                   GPL-2.0-or-later AND LGPL-3.0-or-later
+libidn2                                                                  2.3.8-r7                                                                 (GPL-2.0-or-later AND LGPL-3.0-or-later)
+libidn2                                                                  2.3.8-r7                                                                 
+gdbm                                                                     1.26-r5                                                                  GPL-3.0-or-later
+gdbm.yaml                                                                74465ff25399be9a58446991d3c4f364c30df9f3                                 Apache-2.0
+git/gdbm                                                                 v1.26                                                                    GPL-3.0-or-later
+gdbm                                                                     1.26-r5                                                                  GPL-3.0-or-later
+gdbm                                                                     1.26-r5                                                                  
+libxcrypt                                                                4.5.2-r3                                                                 GPL-2.0-or-later AND LGPL-2.1-or-later
+libxcrypt.yaml                                                           166361dc6836075f8cd3420d4aabbc29d2539a6a                                 Apache-2.0
+libxcrypt                                                                v4.5.2                                                                   GPL-2.0-or-later AND LGPL-2.1-or-later
+libxcrypt                                                                4.5.2-r3                                                                 (GPL-2.0-or-later AND LGPL-2.1-or-later)
+libxcrypt                                                                4.5.2-r3                                                                 
+libcrypt1                                                                2.43-r11                                                                 LGPL-2.1-or-later
+libcrypt1                                                                2.43-r11                                                                 LGPL-2.1-or-later
+libcrypt1                                                                2.43-r11                                                                 
+ncurses-terminfo-base                                                    6.6.20260801-r0                                                          MIT
+ncurses.yaml                                                             20c09013e776c7cf43755895e8f9f11800f83af7                                 Apache-2.0
+ncurses-snapshots                                                        v6_6_20260801                                                            MIT
+ncurses-terminfo-base                                                    6.6.20260801-r0                                                          MIT
+ncurses-terminfo-base                                                    6.6.20260801-r0                                                          
+ncurses                                                                  6.6.20260801-r0                                                          MIT
+ncurses                                                                  6.6.20260801-r0                                                          MIT
+ncurses                                                                  6.6.20260801-r0                                                          
+readline                                                                 8.3-r2                                                                   GPL-3.0-or-later
+readline.yaml                                                            e402be2d67f6e4ed597bbaca3f84cc9215071ff5                                 Apache-2.0
+git/readline                                                             readline-8.3                                                             GPL-3.0-or-later
+readline                                                                 8.3-r2                                                                   GPL-3.0-or-later
+readline                                                                 8.3-r2                                                                   
+sqlite-libs                                                              3.53.4-r0                                                                blessing
+sqlite.yaml                                                              844ca914d9a57afd75d3fed20edfbe8bb629a962                                 Apache-2.0
+sqlite                                                                   3.53.4                                                                   
+sqlite-libs                                                              3.53.4-r0                                                                blessing
+sqlite-libs                                                              3.53.4-r0                                                                
+heimdal-libs                                                             7.8.0-r51                                                                BSD-3-Clause
+heimdal.yaml                                                             1788db950fbaabecb02eda3b5336e24a265be27a                                 Apache-2.0
+heimdal                                                                  heimdal-7.8.0                                                            BSD-3-Clause
+heimdal-libs                                                             7.8.0-r51                                                                BSD-3-Clause
+heimdal-libs                                                             7.8.0-r51                                                                
+cyrus-sasl-heimdal-libs                                                  2.1.28-r54                                                               BSD-3-Clause
+cyrus-sasl-heimdal.yaml                                                  3b4adc6819f05a74f230e0a38a5c65b4e21db60c                                 Apache-2.0
+cyrus-sasl                                                               cyrus-sasl-2.1.28                                                        BSD-3-Clause
+cyrus-sasl-heimdal-libs                                                  2.1.28-r54                                                               BSD-3-Clause
+cyrus-sasl-heimdal-libs                                                  2.1.28-r54                                                               
+libldap-2.6                                                              2.6.13-r6                                                                OLDAP-2.8
+openldap-2.6.yaml                                                        afc986a5fbaa79924a338abd902f3848d41d0299                                 Apache-2.0
+openldap/openldap                                                        OPENLDAP_REL_ENG_2_6_13                                                  OLDAP-2.8
+libldap-2.6                                                              2.6.13-r6                                                                OLDAP-2.8
+libldap-2.6                                                              2.6.13-r6                                                                
+libnghttp2-14                                                            1.70.0-r2                                                                MIT
+nghttp2.yaml                                                             0f75043dd5e2102707470616302978a67908b9a9                                 Apache-2.0
+nghttp2                                                                  v1.70.0                                                                  MIT
+libnghttp2-14                                                            1.70.0-r2                                                                MIT
+libnghttp2-14                                                            1.70.0-r2                                                                
+nghttp3                                                                  1.18.0-r0                                                                MIT
+nghttp3.yaml                                                             dd1909716244bf3f0249d70a7d38d74b0c9d80d4                                 Apache-2.0
+nghttp3                                                                  v1.18.0                                                                  MIT
+nghttp3                                                                  1.18.0-r0                                                                MIT
+nghttp3                                                                  1.18.0-r0                                                                
+ngtcp2                                                                   1.25.0-r0                                                                MIT
+ngtcp2.yaml                                                              502e52a277a0cec99e77a9e1a2dec71cdb0755ba                                 Apache-2.0
+ngtcp2                                                                   v1.25.0                                                                  MIT
+ngtcp2                                                                   1.25.0-r0                                                                MIT
+ngtcp2                                                                   1.25.0-r0                                                                
+libpsl                                                                   0.23.1-r0                                                                MIT
+libpsl.yaml                                                              ad14329f85862392874b102bc9d10bc4fd21202b                                 Apache-2.0
+libpsl                                                                   0.23.1                                                                   MIT
+libpsl                                                                   0.23.1-r0                                                                MIT
+libpsl                                                                   0.23.1-r0                                                                
+zlib                                                                     1.3.2-r3                                                                 MPL-2.0 AND MIT
+zlib.yaml                                                                be39b1bb4e4f9253a19f0d03fb7f1f5cda5e2864                                 Apache-2.0
+zlib                                                                     v1.3.2                                                                   MPL-2.0 AND MIT
+zlib                                                                     1.3.2-r3                                                                 (MPL-2.0 AND MIT)
+zlib                                                                     1.3.2-r3                                                                 
+libcurl-openssl4                                                         8.21.0-r1                                                                MIT
+curl.yaml                                                                9a12ce5222ee10d768d0cd69af8ed4eb2beae76e                                 Apache-2.0
+curl                                                                     curl-8_21_0                                                              MIT
+libcurl-openssl4                                                         8.21.0-r1                                                                MIT
+libcurl-openssl4                                                         8.21.0-r1                                                                
+curl                                                                     8.21.0-r1                                                                MIT
+curl                                                                     8.21.0-r1                                                                MIT
+curl                                                                     8.21.0-r1                                                                
+ncurses-terminfo                                                         6.6.20260801-r0                                                          MIT
+ncurses-terminfo                                                         6.6.20260801-r0                                                          MIT
+ncurses-terminfo                                                         6.6.20260801-r0                                                          

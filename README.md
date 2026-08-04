@@ -5,17 +5,26 @@ running Kubernetes resource (Pod or Deployment) is using — without having to
 manually resolve the image digest and run `cosign` yourself.
 
 ```
-$ kubectl sbom pod/my-app
-CONTAINER   web
-IMAGE       ghcr.io/example/my-app:1.4.0
-DIGEST      ghcr.io/example/my-app@sha256:3b1f...
-SBOM TYPE   https://cyclonedx.org/bom
-COMPONENTS  128
+$ kubectl sbom pod/test-curl
+CONTAINER        test-curl
+IMAGE            cgr.dev/chainguard/curl:latest
+DIGEST           cgr.dev/chainguard/curl@sha256:d9a0165f6b288b050441ab6a9789f98987211f72f527d53f16ffab575f615205
+PLATFORM DIGEST  cgr.dev/chainguard/curl@sha256:17e611ecaaf2b1243d57b2ba4aa1ca618b7a2d89528ac0eff7378e6a66aedb53
+SBOM TYPE        https://spdx.dev/Document
+COMPONENTS       170
 
-NAME        VERSION  LICENSE
-alpine-baselayout  3.4.3-r1  GPL-2.0-only
+NAME               VERSION      LICENSE
+...
+wolfi-baselayout   20230201-r29 MIT
+ca-certificates    20260413     MPL-2.0 AND MIT
+libcrypto3         3.6.3-r3     Apache-2.0
+libssl3            3.6.3-r3     Apache-2.0
+curl               8.21.0-r1    MIT
 ...
 ```
+
+See [`examples/`](examples/) for the full, real captured output (both
+`table` and `json`).
 
 ## Why
 

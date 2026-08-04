@@ -1,0 +1,812 @@
+[
+  {
+    "container": "test-curl",
+    "image": "cgr.dev/chainguard/curl:latest",
+    "digest": "cgr.dev/chainguard/curl@sha256:d9a0165f6b288b050441ab6a9789f98987211f72f527d53f16ffab575f615205",
+    "platformDigest": "cgr.dev/chainguard/curl@sha256:17e611ecaaf2b1243d57b2ba4aa1ca618b7a2d89528ac0eff7378e6a66aedb53",
+    "predicateType": "https://spdx.dev/Document",
+    "components": [
+      {
+        "name": "sha256:17e611ecaaf2b1243d57b2ba4aa1ca618b7a2d89528ac0eff7378e6a66aedb53",
+        "version": "sha256:17e611ecaaf2b1243d57b2ba4aa1ca618b7a2d89528ac0eff7378e6a66aedb53"
+      },
+      {
+        "name": "sha256:001edbadbfeaf167d8568ee6ddd769b899aaabfe4d40581219abd2dfba0bf493",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:1d06b93893bfe173b48eede1f37aa3411a7d3b02d646252a86995e93a8df1cf0",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:8e5b28b859bcbdd179c7c868485a3611bf2fb8f21c656f1a539f38c8096e1808",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:b13fa6693405a3d0f5e062ec77b981a915495a0fa7cce1f5c28f37934c51e78e",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:d963509e1ae315fa3fb65949e695eb4e491cf175404e6d4b993c67f546408b12",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:9de226c9d4db24f7f952c509f4b1a9e1f629fb11567c40e5e7da8018595e6fce",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:d9a2d8aa5eb19f753278206709bafd847992713f83f0170ee55a4aa43733ca64",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:bd9a853514853b97955834ae5eb743210848fbf1e54745e3792cb43c5ef99c15",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:b43e0b14c27418705e420f6d1988be4acaba7bd972792dd25e7d114a44ec1cfb",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:0eaa8e2b4e7f392ce64fb673f56c8419e96c37325b78d0b574bfbe5cb15fbb5c",
+        "version": "20230201"
+      },
+      {
+        "name": "sha256:512f8ed49d82dd05f9e4497cb15ba5f8c176a85c29bc9e3efcf31caaac0f8a8a",
+        "version": "20230201"
+      },
+      {
+        "name": "wolfi",
+        "version": "20230201"
+      },
+      {
+        "name": "wolfi-baselayout",
+        "version": "20230201-r29",
+        "license": "MIT"
+      },
+      {
+        "name": "wolfi-baselayout.yaml",
+        "version": "35e7b4713442869116936fae3fe8cf7c69bc9054",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "wolfi-baselayout",
+        "version": "20230201-r29",
+        "license": "MIT"
+      },
+      {
+        "name": "wolfi-baselayout",
+        "version": "20230201-r29"
+      },
+      {
+        "name": "ca-certificates-bundle",
+        "version": "20260413-r0",
+        "license": "MPL-2.0 AND MIT"
+      },
+      {
+        "name": "ca-certificates.yaml",
+        "version": "5fb1c6869c186cb9b385b875141643409c440ac2",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "20260413",
+        "license": "MPL-2.0 AND MIT"
+      },
+      {
+        "name": "ca-certificates-bundle",
+        "version": "20260413-r0",
+        "license": "(MPL-2.0 AND MIT)"
+      },
+      {
+        "name": "ca-certificates-bundle",
+        "version": "20260413-r0"
+      },
+      {
+        "name": "glibc-locale-posix",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "glibc.yaml",
+        "version": "c8659fb8a02b0cbff1c07e2d367796b6a074e14d",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "gnutools/glibc",
+        "version": "dae425b554207f7c4599c7fac707ad4c08545674",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "glibc-locale-posix",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "glibc-locale-posix",
+        "version": "2.43-r11"
+      },
+      {
+        "name": "libgcc",
+        "version": "16.1.0-r4",
+        "license": "GPL-3.0-or-later WITH GCC-exception-3.1"
+      },
+      {
+        "name": "gcc.yaml",
+        "version": "ee52ebd3c186a06b70547dbfa69282385da38f2b",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "gnutools/gcc",
+        "version": "releases/gcc-16.1.0",
+        "license": "GPL-3.0-or-later WITH GCC-exception-3.1"
+      },
+      {
+        "name": "libgcc",
+        "version": "16.1.0-r4",
+        "license": "(GPL-3.0-or-later WITH GCC-exception-3.1)"
+      },
+      {
+        "name": "libgcc",
+        "version": "16.1.0-r4"
+      },
+      {
+        "name": "glibc",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "glibc",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "glibc",
+        "version": "2.43-r11"
+      },
+      {
+        "name": "ld-linux",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "ld-linux",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "ld-linux",
+        "version": "2.43-r11"
+      },
+      {
+        "name": "libbrotlicommon1",
+        "version": "1.2.0-r3",
+        "license": "MIT"
+      },
+      {
+        "name": "brotli.yaml",
+        "version": "805df43a1d8bc2ce041ef9f1133fd003fa8a0a10",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "brotli",
+        "version": "v1.2.0",
+        "license": "MIT"
+      },
+      {
+        "name": "libbrotlicommon1",
+        "version": "1.2.0-r3",
+        "license": "MIT"
+      },
+      {
+        "name": "libbrotlicommon1",
+        "version": "1.2.0-r3"
+      },
+      {
+        "name": "libbrotlidec1",
+        "version": "1.2.0-r3",
+        "license": "MIT"
+      },
+      {
+        "name": "libbrotlidec1",
+        "version": "1.2.0-r3",
+        "license": "MIT"
+      },
+      {
+        "name": "libbrotlidec1",
+        "version": "1.2.0-r3"
+      },
+      {
+        "name": "libcrypto3",
+        "version": "3.6.3-r3",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "openssl.yaml",
+        "version": "0e3bd807e6225612bd1cce56950bf087b583cee8",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "openssl",
+        "version": "openssl-3.6.3",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libcrypto3",
+        "version": "3.6.3-r3",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libcrypto3",
+        "version": "3.6.3-r3"
+      },
+      {
+        "name": "krb5-conf",
+        "version": "1.0-r9",
+        "license": "MIT"
+      },
+      {
+        "name": "krb5-conf.yaml",
+        "version": "bb37bc90f076f9eb2a12980e43c3f12673133835",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "krb5-conf",
+        "version": "1.0-r9",
+        "license": "MIT"
+      },
+      {
+        "name": "krb5-conf",
+        "version": "1.0-r9"
+      },
+      {
+        "name": "libcom_err",
+        "version": "1.47.4-r1",
+        "license": "GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT"
+      },
+      {
+        "name": "e2fsprogs.yaml",
+        "version": "4cdc0f257ba04f4476c5323e52f0f389e68e534a",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "e2fsprogs",
+        "version": "v1.47.4",
+        "license": "GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT"
+      },
+      {
+        "name": "libcom_err",
+        "version": "1.47.4-r1",
+        "license": "(GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT)"
+      },
+      {
+        "name": "libcom_err",
+        "version": "1.47.4-r1"
+      },
+      {
+        "name": "keyutils-libs",
+        "version": "1.6.3-r38",
+        "license": "GPL-2.0-or-later OR LGPL-2.0-or-later"
+      },
+      {
+        "name": "keyutils.yaml",
+        "version": "2680b937a41377fc6b05382823840a287f3bd50b",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "pub/scm/linux/kernel/git/dhowells/keyutils",
+        "version": "v1.6.3",
+        "license": "GPL-2.0-or-later OR LGPL-2.0-or-later"
+      },
+      {
+        "name": "keyutils-libs",
+        "version": "1.6.3-r38",
+        "license": "(GPL-2.0-or-later OR LGPL-2.0-or-later)"
+      },
+      {
+        "name": "keyutils-libs",
+        "version": "1.6.3-r38"
+      },
+      {
+        "name": "libssl3",
+        "version": "3.6.3-r3",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libssl3",
+        "version": "3.6.3-r3",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libssl3",
+        "version": "3.6.3-r3"
+      },
+      {
+        "name": "libverto",
+        "version": "0.3.2-r7",
+        "license": "MIT"
+      },
+      {
+        "name": "libverto.yaml",
+        "version": "79c7eda43fae1c44ddd378bb021e59175624ad6e",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libverto",
+        "version": "0.3.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libverto",
+        "version": "0.3.2-r7",
+        "license": "MIT"
+      },
+      {
+        "name": "libverto",
+        "version": "0.3.2-r7"
+      },
+      {
+        "name": "krb5-libs",
+        "version": "1.22.2-r2",
+        "license": "MIT"
+      },
+      {
+        "name": "krb5.yaml",
+        "version": "63a99011b1face0d36060eb2d4cffaf97630a578",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "krb5",
+        "version": "krb5-1.22.2-final",
+        "license": "MIT"
+      },
+      {
+        "name": "krb5-libs",
+        "version": "1.22.2-r2",
+        "license": "MIT"
+      },
+      {
+        "name": "krb5-libs",
+        "version": "1.22.2-r2"
+      },
+      {
+        "name": "libunistring",
+        "version": "1.4.2-r2",
+        "license": "GPL-2.0-or-later OR LGPL-3.0-or-later"
+      },
+      {
+        "name": "libunistring.yaml",
+        "version": "44bcd0af195f786e83f248bcef66933277c1d6c9",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "git/libunistring",
+        "version": "v1.4.2",
+        "license": "GPL-2.0-or-later OR LGPL-3.0-or-later"
+      },
+      {
+        "name": "libunistring",
+        "version": "1.4.2-r2",
+        "license": "(GPL-2.0-or-later OR LGPL-3.0-or-later)"
+      },
+      {
+        "name": "libunistring",
+        "version": "1.4.2-r2"
+      },
+      {
+        "name": "libidn2",
+        "version": "2.3.8-r7",
+        "license": "GPL-2.0-or-later AND LGPL-3.0-or-later"
+      },
+      {
+        "name": "libidn2.yaml",
+        "version": "88eb619cdd1904e42810d4e2c7e8d65cdaa64d5a",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libidn2",
+        "version": "v2.3.8",
+        "license": "GPL-2.0-or-later AND LGPL-3.0-or-later"
+      },
+      {
+        "name": "libidn2",
+        "version": "2.3.8-r7",
+        "license": "(GPL-2.0-or-later AND LGPL-3.0-or-later)"
+      },
+      {
+        "name": "libidn2",
+        "version": "2.3.8-r7"
+      },
+      {
+        "name": "gdbm",
+        "version": "1.26-r5",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "gdbm.yaml",
+        "version": "74465ff25399be9a58446991d3c4f364c30df9f3",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "git/gdbm",
+        "version": "v1.26",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "gdbm",
+        "version": "1.26-r5",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "gdbm",
+        "version": "1.26-r5"
+      },
+      {
+        "name": "libxcrypt",
+        "version": "4.5.2-r3",
+        "license": "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      },
+      {
+        "name": "libxcrypt.yaml",
+        "version": "166361dc6836075f8cd3420d4aabbc29d2539a6a",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libxcrypt",
+        "version": "v4.5.2",
+        "license": "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      },
+      {
+        "name": "libxcrypt",
+        "version": "4.5.2-r3",
+        "license": "(GPL-2.0-or-later AND LGPL-2.1-or-later)"
+      },
+      {
+        "name": "libxcrypt",
+        "version": "4.5.2-r3"
+      },
+      {
+        "name": "libcrypt1",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "libcrypt1",
+        "version": "2.43-r11",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "libcrypt1",
+        "version": "2.43-r11"
+      },
+      {
+        "name": "ncurses-terminfo-base",
+        "version": "6.6.20260801-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ncurses.yaml",
+        "version": "20c09013e776c7cf43755895e8f9f11800f83af7",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "ncurses-snapshots",
+        "version": "v6_6_20260801",
+        "license": "MIT"
+      },
+      {
+        "name": "ncurses-terminfo-base",
+        "version": "6.6.20260801-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ncurses-terminfo-base",
+        "version": "6.6.20260801-r0"
+      },
+      {
+        "name": "ncurses",
+        "version": "6.6.20260801-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ncurses",
+        "version": "6.6.20260801-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ncurses",
+        "version": "6.6.20260801-r0"
+      },
+      {
+        "name": "readline",
+        "version": "8.3-r2",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "readline.yaml",
+        "version": "e402be2d67f6e4ed597bbaca3f84cc9215071ff5",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "git/readline",
+        "version": "readline-8.3",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "readline",
+        "version": "8.3-r2",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "readline",
+        "version": "8.3-r2"
+      },
+      {
+        "name": "sqlite-libs",
+        "version": "3.53.4-r0",
+        "license": "blessing"
+      },
+      {
+        "name": "sqlite.yaml",
+        "version": "844ca914d9a57afd75d3fed20edfbe8bb629a962",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "sqlite",
+        "version": "3.53.4"
+      },
+      {
+        "name": "sqlite-libs",
+        "version": "3.53.4-r0",
+        "license": "blessing"
+      },
+      {
+        "name": "sqlite-libs",
+        "version": "3.53.4-r0"
+      },
+      {
+        "name": "heimdal-libs",
+        "version": "7.8.0-r51",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "heimdal.yaml",
+        "version": "1788db950fbaabecb02eda3b5336e24a265be27a",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "heimdal",
+        "version": "heimdal-7.8.0",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "heimdal-libs",
+        "version": "7.8.0-r51",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "heimdal-libs",
+        "version": "7.8.0-r51"
+      },
+      {
+        "name": "cyrus-sasl-heimdal-libs",
+        "version": "2.1.28-r54",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "cyrus-sasl-heimdal.yaml",
+        "version": "3b4adc6819f05a74f230e0a38a5c65b4e21db60c",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "cyrus-sasl",
+        "version": "cyrus-sasl-2.1.28",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "cyrus-sasl-heimdal-libs",
+        "version": "2.1.28-r54",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "cyrus-sasl-heimdal-libs",
+        "version": "2.1.28-r54"
+      },
+      {
+        "name": "libldap-2.6",
+        "version": "2.6.13-r6",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "openldap-2.6.yaml",
+        "version": "afc986a5fbaa79924a338abd902f3848d41d0299",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "openldap/openldap",
+        "version": "OPENLDAP_REL_ENG_2_6_13",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "libldap-2.6",
+        "version": "2.6.13-r6",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "libldap-2.6",
+        "version": "2.6.13-r6"
+      },
+      {
+        "name": "libnghttp2-14",
+        "version": "1.70.0-r2",
+        "license": "MIT"
+      },
+      {
+        "name": "nghttp2.yaml",
+        "version": "0f75043dd5e2102707470616302978a67908b9a9",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "nghttp2",
+        "version": "v1.70.0",
+        "license": "MIT"
+      },
+      {
+        "name": "libnghttp2-14",
+        "version": "1.70.0-r2",
+        "license": "MIT"
+      },
+      {
+        "name": "libnghttp2-14",
+        "version": "1.70.0-r2"
+      },
+      {
+        "name": "nghttp3",
+        "version": "1.18.0-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "nghttp3.yaml",
+        "version": "dd1909716244bf3f0249d70a7d38d74b0c9d80d4",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "nghttp3",
+        "version": "v1.18.0",
+        "license": "MIT"
+      },
+      {
+        "name": "nghttp3",
+        "version": "1.18.0-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "nghttp3",
+        "version": "1.18.0-r0"
+      },
+      {
+        "name": "ngtcp2",
+        "version": "1.25.0-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ngtcp2.yaml",
+        "version": "502e52a277a0cec99e77a9e1a2dec71cdb0755ba",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "ngtcp2",
+        "version": "v1.25.0",
+        "license": "MIT"
+      },
+      {
+        "name": "ngtcp2",
+        "version": "1.25.0-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ngtcp2",
+        "version": "1.25.0-r0"
+      },
+      {
+        "name": "libpsl",
+        "version": "0.23.1-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "libpsl.yaml",
+        "version": "ad14329f85862392874b102bc9d10bc4fd21202b",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "libpsl",
+        "version": "0.23.1",
+        "license": "MIT"
+      },
+      {
+        "name": "libpsl",
+        "version": "0.23.1-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "libpsl",
+        "version": "0.23.1-r0"
+      },
+      {
+        "name": "zlib",
+        "version": "1.3.2-r3",
+        "license": "MPL-2.0 AND MIT"
+      },
+      {
+        "name": "zlib.yaml",
+        "version": "be39b1bb4e4f9253a19f0d03fb7f1f5cda5e2864",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "zlib",
+        "version": "v1.3.2",
+        "license": "MPL-2.0 AND MIT"
+      },
+      {
+        "name": "zlib",
+        "version": "1.3.2-r3",
+        "license": "(MPL-2.0 AND MIT)"
+      },
+      {
+        "name": "zlib",
+        "version": "1.3.2-r3"
+      },
+      {
+        "name": "libcurl-openssl4",
+        "version": "8.21.0-r1",
+        "license": "MIT"
+      },
+      {
+        "name": "curl.yaml",
+        "version": "9a12ce5222ee10d768d0cd69af8ed4eb2beae76e",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "curl",
+        "version": "curl-8_21_0",
+        "license": "MIT"
+      },
+      {
+        "name": "libcurl-openssl4",
+        "version": "8.21.0-r1",
+        "license": "MIT"
+      },
+      {
+        "name": "libcurl-openssl4",
+        "version": "8.21.0-r1"
+      },
+      {
+        "name": "curl",
+        "version": "8.21.0-r1",
+        "license": "MIT"
+      },
+      {
+        "name": "curl",
+        "version": "8.21.0-r1",
+        "license": "MIT"
+      },
+      {
+        "name": "curl",
+        "version": "8.21.0-r1"
+      },
+      {
+        "name": "ncurses-terminfo",
+        "version": "6.6.20260801-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ncurses-terminfo",
+        "version": "6.6.20260801-r0",
+        "license": "MIT"
+      },
+      {
+        "name": "ncurses-terminfo",
+        "version": "6.6.20260801-r0"
+      }
+    ]
+  }
+]
