@@ -27,35 +27,60 @@ type Result struct {
 }
 
 // PrintTable writes a human-readable summary of results to w.
-func PrintTable(w io.Writer, results []Result) {
+func PrintTable(w io.Writer, results []Result) error {
 	tw := tabwriter.NewWriter(w, 0, 2, 2, ' ', 0)
+	ew := &errWriter{w: tw}
 	for i, r := range results {
 		if i > 0 {
-			fmt.Fprintln(tw)
+			ew.println()
 		}
-		fmt.Fprintf(tw, "CONTAINER\t%s\n", r.Container)
-		fmt.Fprintf(tw, "IMAGE\t%s\n", r.Image)
+		ew.printf("CONTAINER\t%s\n", r.Container)
+		ew.printf("IMAGE\t%s\n", r.Image)
 		if r.Digest != "" {
-			fmt.Fprintf(tw, "DIGEST\t%s\n", r.Digest)
+			ew.printf("DIGEST\t%s\n", r.Digest)
 		}
 		if r.PlatformDigest != "" {
-			fmt.Fprintf(tw, "PLATFORM DIGEST\t%s\n", r.PlatformDigest)
+			ew.printf("PLATFORM DIGEST\t%s\n", r.PlatformDigest)
 		}
 		if r.Error != "" {
-			fmt.Fprintf(tw, "ERROR\t%s\n", r.Error)
+			ew.printf("ERROR\t%s\n", r.Error)
 			continue
 		}
-		fmt.Fprintf(tw, "SBOM TYPE\t%s\n", r.PredicateType)
-		fmt.Fprintf(tw, "COMPONENTS\t%d\n", len(r.Components))
+		ew.printf("SBOM TYPE\t%s\n", r.PredicateType)
+		ew.printf("COMPONENTS\t%d\n", len(r.Components))
 		if len(r.Components) > 0 {
-			fmt.Fprintln(tw)
-			fmt.Fprintf(tw, "NAME\tVERSION\tLICENSE\n")
+			ew.println()
+			ew.printf("NAME\tVERSION\tLICENSE\n")
 			for _, c := range r.Components {
-				fmt.Fprintf(tw, "%s\t%s\t%s\n", c.Name, c.Version, c.License)
+				ew.printf("%s\t%s\t%s\n", c.Name, c.Version, c.License)
 			}
 		}
 	}
-	tw.Flush()
+	if ew.err != nil {
+		return ew.err
+	}
+	return tw.Flush()
+}
+
+// errWriter lets a sequence of writes skip the usual per-call error check;
+// the first error (if any) is recorded and later writes become no-ops.
+type errWriter struct {
+	w   io.Writer
+	err error
+}
+
+func (ew *errWriter) printf(format string, a ...any) {
+	if ew.err != nil {
+		return
+	}
+	_, ew.err = fmt.Fprintf(ew.w, format, a...)
+}
+
+func (ew *errWriter) println() {
+	if ew.err != nil {
+		return
+	}
+	_, ew.err = fmt.Fprintln(ew.w)
 }
 
 // PrintJSON writes the normalized results as indented JSON to w.

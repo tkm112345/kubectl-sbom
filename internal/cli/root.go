@@ -88,8 +88,7 @@ func run(cmd *cobra.Command, args []string) error {
 
 	switch outputFormat {
 	case "table":
-		output.PrintTable(os.Stdout, results)
-		return nil
+		return output.PrintTable(os.Stdout, results)
 	case "json":
 		return output.PrintJSON(os.Stdout, results)
 	default: // spdx, cyclonedx
