@@ -20,6 +20,7 @@ var (
 	container      string
 	outputFormat   string
 	kubeconfigPath string
+	kubeContext    string
 )
 
 // Execute runs the kubectl-sbom root command.
@@ -43,6 +44,7 @@ Requires the cosign CLI to be installed and available on PATH.`,
 	root.Flags().StringVarP(&container, "container", "c", "", "Limit to a specific container name")
 	root.Flags().StringVarP(&outputFormat, "output", "o", "table", "Output format: table|json|spdx|cyclonedx")
 	root.Flags().StringVar(&kubeconfigPath, "kubeconfig", "", "Path to a kubeconfig file (defaults to $KUBECONFIG or ~/.kube/config)")
+	root.Flags().StringVar(&kubeContext, "context", "", "Kubeconfig context to use (defaults to the current-context)")
 
 	if err := root.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, "Error:", err)
@@ -60,7 +62,7 @@ func run(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("unknown output format %q (supported: table, json, spdx, cyclonedx)", outputFormat)
 	}
 
-	clientset, ns, err := k8sclient.New(kubeconfigPath, namespace)
+	clientset, ns, err := k8sclient.New(kubeconfigPath, kubeContext, namespace)
 	if err != nil {
 		return err
 	}

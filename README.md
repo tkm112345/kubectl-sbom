@@ -47,7 +47,7 @@ Once installed as `kubectl-sbom` on `PATH`, kubectl will expose it as
 ## Usage
 
 ```
-kubectl sbom <pod|deployment>/<name> [-n namespace] [-c container] [-o table|json|spdx|cyclonedx]
+kubectl sbom <pod|deployment>/<name> [-n namespace] [-c container] [-o table|json|spdx|cyclonedx] [--context ctx] [--kubeconfig path]
 ```
 
 - `pod/<name>` — resolves image digests directly from the pod's status.

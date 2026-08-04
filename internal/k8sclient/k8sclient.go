@@ -11,15 +11,20 @@ import (
 
 // New builds a clientset and resolves the effective namespace. If
 // kubeconfigPath is empty, the standard kubeconfig loading rules (KUBECONFIG
-// env var, then ~/.kube/config) are used. If namespaceOverride is empty, the
-// namespace is taken from the current context.
-func New(kubeconfigPath, namespaceOverride string) (kubernetes.Interface, string, error) {
+// env var, then ~/.kube/config) are used. If contextName is empty, the
+// kubeconfig's current-context is used. If namespaceOverride is empty, the
+// namespace is taken from the selected context.
+func New(kubeconfigPath, contextName, namespaceOverride string) (kubernetes.Interface, string, error) {
 	loadingRules := clientcmd.NewDefaultClientConfigLoadingRules()
 	if kubeconfigPath != "" {
 		loadingRules.ExplicitPath = kubeconfigPath
 	}
 
-	clientConfig := clientcmd.NewNonInteractiveDeferredLoadingClientConfig(loadingRules, &clientcmd.ConfigOverrides{})
+	overrides := &clientcmd.ConfigOverrides{}
+	if contextName != "" {
+		overrides.CurrentContext = contextName
+	}
+	clientConfig := clientcmd.NewNonInteractiveDeferredLoadingClientConfig(loadingRules, overrides)
 
 	restConfig, err := clientConfig.ClientConfig()
 	if err != nil {
