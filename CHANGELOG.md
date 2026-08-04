@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.0.2] - 2026-08-04
+
 ### Added
 
 - Prebuilt binaries published to GitHub Releases on every `v*` tag, via
@@ -24,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   before fetching the SBOM. The resolved platform digest is shown as
   `PLATFORM DIGEST` / `platformDigest` when this happens.
 
+### Changed
+
+- README: clarify this is an unofficial, community project, not
+  affiliated with CNCF, Kubernetes, or Sigstore/cosign.
+
 ## [0.0.1] - 2026-08-04
 
 ### Added
@@ -37,5 +44,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - `-n/--namespace`, `-c/--container`, `--context`, `--kubeconfig` flags.
 - CI (build, vet, test, golangci-lint) and branch protection on `main`.
 
-[Unreleased]: https://github.com/tkm112345/kubectl-sbom/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/tkm112345/kubectl-sbom/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/tkm112345/kubectl-sbom/releases/tag/v0.0.2
 [0.0.1]: https://github.com/tkm112345/kubectl-sbom/releases/tag/v0.0.1
