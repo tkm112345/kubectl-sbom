@@ -46,6 +46,13 @@ Kubernetes API, then fetches the SBOM attestation for that exact digest.
 
 ## Install
 
+Download a prebuilt binary from the
+[Releases page](https://github.com/tkm112345/kubectl-sbom/releases)
+(linux/darwin, amd64/arm64; windows/amd64), verify it against the
+release's `checksums.txt`, and put `kubectl-sbom` on `PATH`.
+
+Or build from source:
+
 ```
 go install github.com/tkm112345/kubectl-sbom/cmd/kubectl-sbom@latest
 ```

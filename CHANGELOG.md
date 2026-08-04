@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Prebuilt binaries published to GitHub Releases on every `v*` tag, via
+  GoReleaser (linux/darwin amd64+arm64, windows/amd64), with a
+  `checksums.txt`.
+- `examples/` with real captured `table` and `json` output.
+
 ### Fixed
 
 - Multi-arch images: SBOM attestations attached to a manifest-list (image
