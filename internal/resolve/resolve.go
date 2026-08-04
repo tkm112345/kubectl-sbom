@@ -18,6 +18,7 @@ type ContainerImage struct {
 	Container string
 	Image     string // reference as declared in the pod spec (may be tag-based)
 	Digest    string // repo@sha256:... reference, empty if it could not be resolved
+	NodeName  string // node the pod is scheduled on, empty if not yet scheduled
 }
 
 // ParseResourceArg splits "<kind>/<name>" into a normalized kind and a name.
@@ -91,7 +92,7 @@ func imagesFromPod(pod *corev1.Pod, containerFilter string) ([]ContainerImage, e
 		if containerFilter != "" && c.Name != containerFilter {
 			continue
 		}
-		ci := ContainerImage{Container: c.Name, Image: c.Image}
+		ci := ContainerImage{Container: c.Name, Image: c.Image, NodeName: pod.Spec.NodeName}
 		if cs, ok := statusByName[c.Name]; ok {
 			ci.Digest = digestRefFromImageID(cs.ImageID, c.Image)
 		}

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- Multi-arch images: SBOM attestations attached to a manifest-list (image
+  index) digest often only describe the index itself, not the actual
+  package contents. `kubectl-sbom` now inspects the resolved digest and, if
+  it is an index, resolves it down to the manifest for the node's actual
+  OS/architecture (falling back to `linux/amd64` if the node can't be read)
+  before fetching the SBOM. The resolved platform digest is shown as
+  `PLATFORM DIGEST` / `platformDigest` when this happens.
+
 ## [0.0.1] - 2026-08-04
 
 ### Added

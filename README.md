@@ -57,6 +57,13 @@ kubectl sbom <pod|deployment>/<name> [-n namespace] [-c container] [-o table|jso
 - `-o spdx` / `-o cyclonedx` — the raw attestation document for a single
   container (use `-c` to select one if the resource has more than one).
 
+For multi-arch images, the digest reported by the container runtime often
+points to the image *index* rather than a single-platform manifest, and its
+SBOM attestation (if any) only describes the index itself. kubectl-sbom
+detects this and resolves down to the manifest for the node's actual
+OS/architecture before fetching the SBOM; the resolved digest is shown as
+`PLATFORM DIGEST`.
+
 ## Scope
 
 This is a v1 focused on read/inspect only:

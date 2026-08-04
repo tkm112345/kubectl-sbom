@@ -13,13 +13,17 @@ import (
 
 // Result is the outcome of resolving and fetching the SBOM for one container.
 type Result struct {
-	Container     string                `json:"container"`
-	Image         string                `json:"image"`
-	Digest        string                `json:"digest,omitempty"`
-	PredicateType string                `json:"predicateType,omitempty"`
-	Components    []normalize.Component `json:"components,omitempty"`
-	RawPredicate  json.RawMessage       `json:"-"`
-	Error         string                `json:"error,omitempty"`
+	Container string `json:"container"`
+	Image     string `json:"image"`
+	Digest    string `json:"digest,omitempty"`
+	// PlatformDigest is set when Digest referred to a multi-arch image
+	// index and was resolved down to this platform-specific manifest
+	// digest before the SBOM was fetched.
+	PlatformDigest string                `json:"platformDigest,omitempty"`
+	PredicateType  string                `json:"predicateType,omitempty"`
+	Components     []normalize.Component `json:"components,omitempty"`
+	RawPredicate   json.RawMessage       `json:"-"`
+	Error          string                `json:"error,omitempty"`
 }
 
 // PrintTable writes a human-readable summary of results to w.
@@ -33,6 +37,9 @@ func PrintTable(w io.Writer, results []Result) {
 		fmt.Fprintf(tw, "IMAGE\t%s\n", r.Image)
 		if r.Digest != "" {
 			fmt.Fprintf(tw, "DIGEST\t%s\n", r.Digest)
+		}
+		if r.PlatformDigest != "" {
+			fmt.Fprintf(tw, "PLATFORM DIGEST\t%s\n", r.PlatformDigest)
 		}
 		if r.Error != "" {
 			fmt.Fprintf(tw, "ERROR\t%s\n", r.Error)

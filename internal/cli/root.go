@@ -8,9 +8,13 @@ import (
 
 	"github.com/spf13/cobra"
 
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/client-go/kubernetes"
+
 	"github.com/tkm112345/kubectl-sbom/internal/k8sclient"
 	"github.com/tkm112345/kubectl-sbom/internal/normalize"
 	"github.com/tkm112345/kubectl-sbom/internal/output"
+	"github.com/tkm112345/kubectl-sbom/internal/platform"
 	"github.com/tkm112345/kubectl-sbom/internal/resolve"
 	"github.com/tkm112345/kubectl-sbom/internal/sbomfetch"
 )
@@ -79,7 +83,7 @@ func run(cmd *cobra.Command, args []string) error {
 
 	results := make([]output.Result, 0, len(images))
 	for _, img := range images {
-		results = append(results, fetchOne(ctx, img, outputFormat))
+		results = append(results, fetchOne(ctx, clientset, img, outputFormat))
 	}
 
 	switch outputFormat {
@@ -93,7 +97,7 @@ func run(cmd *cobra.Command, args []string) error {
 	}
 }
 
-func fetchOne(ctx context.Context, img resolve.ContainerImage, outputFormat string) output.Result {
+func fetchOne(ctx context.Context, clientset kubernetes.Interface, img resolve.ContainerImage, outputFormat string) output.Result {
 	r := output.Result{Container: img.Container, Image: img.Image, Digest: img.Digest}
 
 	ref := img.Digest
@@ -104,6 +108,14 @@ func fetchOne(ctx context.Context, img resolve.ContainerImage, outputFormat stri
 		r.Error = "no resolvable image reference"
 		return r
 	}
+
+	if resolvedRef, wasIndex, err := platform.ResolveDigest(ctx, ref, targetPlatform(ctx, clientset, img.NodeName)); err == nil && wasIndex {
+		r.PlatformDigest = resolvedRef
+		ref = resolvedRef
+	}
+	// If ResolveDigest fails (e.g. no network path to the registry from
+	// where kubectl-sbom runs), fall through and try the SBOM fetch with
+	// the original reference rather than failing the whole lookup here.
 
 	var (
 		att *sbomfetch.Attestation
@@ -135,4 +147,20 @@ func fetchOne(ctx context.Context, img resolve.ContainerImage, outputFormat stri
 	}
 
 	return r
+}
+
+// targetPlatform determines the OS/architecture of the node a container is
+// running on, so a multi-arch image index can be resolved to the manifest
+// that was actually pulled. Falls back to platform.DefaultTarget if the
+// node is unknown or unreadable (e.g. the caller lacks permission to get
+// Node objects).
+func targetPlatform(ctx context.Context, clientset kubernetes.Interface, nodeName string) platform.Target {
+	if nodeName == "" {
+		return platform.DefaultTarget
+	}
+	node, err := clientset.CoreV1().Nodes().Get(ctx, nodeName, metav1.GetOptions{})
+	if err != nil || node.Status.NodeInfo.Architecture == "" || node.Status.NodeInfo.OperatingSystem == "" {
+		return platform.DefaultTarget
+	}
+	return platform.Target{OS: node.Status.NodeInfo.OperatingSystem, Architecture: node.Status.NodeInfo.Architecture}
 }
