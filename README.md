@@ -1,5 +1,10 @@
 # kubectl-sbom
 
+> **Unofficial, community project.** Not affiliated with, endorsed by, or
+> part of CNCF, the Kubernetes project, or Sigstore/cosign. "kubectl" is a
+> trademark of the Linux Foundation; this plugin merely follows the
+> [kubectl plugin naming convention](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
+
 A `kubectl` plugin that shows the SBOM attached to the container image(s) a
 running Kubernetes resource (Pod or Deployment) is using — without having to
 manually resolve the image digest and run `cosign` yourself.
